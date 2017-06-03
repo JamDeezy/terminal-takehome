@@ -86,8 +86,8 @@ postgres -D /usr/local/var/postgres
 psql postgres
 postgres=# create role terminal with createdb login password 'terminal';
 rake db:create && rake db:migrate
-heroku buildpacks:add --index 1 heroku/ruby
-heroku buildpacks:add --index 2 heroku/nodejs
+heroku buildpacks:add --index 1 heroku/nodejs
+heroku buildpacks:add --index 2 heroku/ruby
 ````
 
 ## TODO
