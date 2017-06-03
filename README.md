@@ -10,7 +10,7 @@ Terminal 49 Take home
 ````
 - Assume input can contain PABV
 - Assume all codes are prepended with TXG
-- Assume that the rest of the codes are digits [0-9] length = 8
+- Assume that the rest of the codes are digits [0-9] length = 9
 
 ## PILShip API
 Request:
@@ -71,15 +71,19 @@ Requirements
 
 
 # Setup
+````
 $ psql --version
 psql (PostgreSQL) 9.6.1
 $ cat .ruby-version
 ruby-2.2.0@terminal-takehome
 $ rails --version
 Rails 4.2.0
+````
 
 ## Run
+````
 postgres -D /usr/local/var/postgres
 psql postgres
 postgres=# create role terminal with createdb login password 'terminal';
 rake db:create && rake db:migrate
+````
