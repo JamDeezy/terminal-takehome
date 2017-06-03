@@ -87,3 +87,6 @@ psql postgres
 postgres=# create role terminal with createdb login password 'terminal';
 rake db:create && rake db:migrate
 ````
+
+## TODO
+1) webpack-dev-server & hot loading modules
