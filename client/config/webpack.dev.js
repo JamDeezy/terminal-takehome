@@ -5,7 +5,7 @@ module.exports = {
   devtool: "cheap-module-source-map",
 
   entry: {
-    main: "./index.jsx"
+    main: "./client/index.jsx"
   },
 
   resolve: {

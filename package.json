@@ -2,10 +2,9 @@
   "name": "terminal-49-client",
   "version": "1.0.0",
   "description": "Terminal 49 Takehome assignment",
-  "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack --env=dev --config=./config/webpack.dev.js --progress --profile --colors --watch",
-    "postinstall": "./node_modules/.bin/webpack --env=prod --config=./config/webpack.prod.js"
+    "start": "./node_modules/.bin/webpack --env=dev --config=./client/config/webpack.dev.js --progress --profile --colors --watch",
+    "postinstall": "./node_modules/.bin/webpack --env=prod --config=./client/config/webpack.prod.js"
   },
   "author": "",
   "license": "ISC",

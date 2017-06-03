@@ -17,7 +17,7 @@
 /tmp
 
 # Ignore node modules
-/client/node_modules/
+/node_modules/
 
 # Ignore compiled assets
 /public/assets
