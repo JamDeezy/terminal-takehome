@@ -1,3 +1,22 @@
 .bookings-show {
+  margin: 20px;
 
+  .row {
+    margin: 5px 0 0 0;
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .left {
+      width: 200px;
+      float: left;
+    }
+
+    .right {
+      font-weight: bold;
+      overflow: hidden;
+      width: 600px;
+    }
+  }
 }
