@@ -6,6 +6,9 @@
     "start": "./node_modules/.bin/webpack --env=dev --config=./client/config/webpack.dev.js --progress --profile --colors --watch",
     "postinstall": "./node_modules/.bin/webpack --env=prod --config=./client/config/webpack.prod.js"
   },
+  "engines": {
+    "node": "7.10.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
