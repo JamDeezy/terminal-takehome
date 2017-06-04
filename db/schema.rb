@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170603205713) do
+ActiveRecord::Schema.define(version: 20170604001811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "reference_id",                   null: false
-    t.string "steamship_line", default: "PIL"
-    t.string "origin"
-    t.string "destination"
-    t.string "vessel"
-    t.string "voyage"
-    t.date   "vessel_eta"
-    t.text   "containers"
+    t.string  "reference_id",                   null: false
+    t.string  "steamship_line", default: "PIL"
+    t.string  "origin"
+    t.string  "destination"
+    t.string  "vessel"
+    t.string  "voyage"
+    t.date    "vessel_eta"
+    t.text    "containers"
+    t.boolean "watch",          default: false
   end
 
 end

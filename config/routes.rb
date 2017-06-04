@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :bookings, only: [:index, :show] do
       post 'watch', on: :member
+      post 'unwatch', on: :member
     end
   end
 

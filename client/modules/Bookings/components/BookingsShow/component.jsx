@@ -16,7 +16,8 @@ class BookingsShow extends React.Component {
           steamship_line: "",
           vessel: "",
           vessel_eta: "",
-          voyage: ""
+          voyage: "",
+          watch: false
         }
       });
 
@@ -37,6 +38,20 @@ class BookingsShow extends React.Component {
     }
   }
 
+  handleWatch() {
+    let api = this.state.booking.watch
+      ? apis.bookingsUnwatch
+      : apis.bookingsWatch;
+
+    api(this.state.booking.reference_id).then(response => {
+      if (response.status === "error") {
+        this.props.history.push(`/errors`, response);
+      } else {
+        this.setState({ booking: response });
+      }
+    });
+  }
+
   renderContainers() {
     return this.state.booking.containers.map(container => {
       return (
@@ -47,6 +62,17 @@ class BookingsShow extends React.Component {
         </li>
       );
     });
+  }
+
+  renderWatch() {
+    return (
+      <button
+        className={this.state.booking.watch ? "unwatch" : "watch"}
+        onClick={this.handleWatch.bind(this)}
+      >
+        {this.state.booking.watch ? "Unwatch" : "Watch"}
+      </button>
+    );
   }
 
   render() {
@@ -83,6 +109,10 @@ class BookingsShow extends React.Component {
         <div className="row">
           <div className="left">Containers</div>
           <div className="right">{this.renderContainers()}</div>
+        </div>
+        <div className="row">
+          <div className="left">Watch</div>
+          <div className="right">{this.renderWatch()}</div>
         </div>
       </div>
     );

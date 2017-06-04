@@ -92,3 +92,4 @@ heroku buildpacks:add --index 2 heroku/ruby
 
 ## TODO
 1) webpack-dev-server & hot loading modules
+2) audit bookings to create history (using auditable)

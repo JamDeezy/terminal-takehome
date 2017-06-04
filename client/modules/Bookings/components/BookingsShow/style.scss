@@ -18,5 +18,20 @@
       overflow: hidden;
       width: 600px;
     }
+
+    button {
+      border: none;
+      border-radius: none;
+    }
+
+    button.watch {
+      background: darkgreen;
+      color: white;
+    }
+
+    button.unwatch {
+      background: darkred;
+      color: white;
+    }
   }
 }
